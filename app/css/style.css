@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: brown;
+}
+.gameBoard {
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: green;
+  height: 320px;
+  width: 320px;
+  margin-top: 10%;
+  border-radius: 10%;
+}
+.gameBtn {
+  background-color: blue;
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+  margin-top: 2%;
+}
+.playSound{
+  border-bottom: 3px solid;
+  border-right: 1px;
+  transition: .5s;
+  background-color: yellow;
+}
+.startGameButton {
+  align-self: flex-end;
+}
