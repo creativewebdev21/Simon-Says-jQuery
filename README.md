@@ -1,5 +1,10 @@
-# Gulp Starter for CSS Tricks Tutorial  
+# Simon Says Game
 
-This repo is a gulp starter for this CSS Tricks tutorial. 
+LIVE: https://sweetmantech.gitub.io/pages/SIMON_SAYS/app/index.html
 
-Remember to do run the `npm install` command after cloning this repo :) 
+This is a web-based Simon Says game I've built as the last requirement to earn Free Code Camp's Front End Web Development Certification.
+
+Languages Used:
+HTML
+CSS
+JavaScript (jQuery)
