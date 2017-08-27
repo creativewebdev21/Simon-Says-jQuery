@@ -8,3 +8,5 @@ Languages Used:
 HTML
 CSS
 JavaScript (jQuery)
+
+Sound files taken from FreeCodeCamp
