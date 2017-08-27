@@ -34,6 +34,7 @@ $(".startGameButton").click(function() {
 $(".gameBtn").click(function() {
   if(userTurn) {
     var userSelection = $(this).index();
+    eval("audio" + (userSelection+1) + ".play()");
     userSequence.push(userSelection);
     if (!userMemoryIsCorrect()) {
       alert("Incorrect, please start over and try again");
@@ -66,6 +67,7 @@ function playSimonSequence(startArray) {
     var holder = startArray[0];
     var newArray = startArray.slice(1);
     $(".gameBtn").eq(holder).addClass("playSound");
+    eval("audio" + (holder+1) + ".play()");
     setTimeout( function() {
       $(".gameBtn").eq(holder).removeClass("playSound");
       setTimeout( function() {
