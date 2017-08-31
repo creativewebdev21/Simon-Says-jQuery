@@ -37,7 +37,7 @@ $(".gameBtn").click(function() {
     eval("audio" + (userSelection+1) + ".play()");
     userSequence.push(userSelection);
     if (!userMemoryIsCorrect()) {
-      alert("Incorrect, please start over and try again");
+      resetGameRegular();
     } else if (userSequence.length == simonSaysSequence.length) {
       if (playerBeatGame()) {
         alert("You Won!");
@@ -91,6 +91,12 @@ function userMemoryIsCorrect() {
 
 function playerBeatGame() {
   return simonSaysSequence === userSequence && simonSaysSequence.length >= 20;
+}
+
+function resetGameRegular() {
+  alert("Incorrect, try again");
+  playSimonSequence(simonSaysSequence);
+  userSequence = [];
 }
 
 });
