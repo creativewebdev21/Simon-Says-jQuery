@@ -1,13 +1,14 @@
 body {
   background-color: #D7263D;
+  font-family: 'Rubik', sans-serif;
 }
 .title {
-  padding-left: 37%;
+  padding-left: 36%;
 }
 .gameDashboard {
-  border: 1px solid;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   margin-top: 5%;
 }
@@ -28,6 +29,7 @@ body {
   border-radius: 15%;
   margin-bottom: 3px;
   cursor: pointer;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 .playSound{
   border-bottom: 3px solid;
