@@ -10,7 +10,7 @@ $(".gameBoard").append(
 $(".gameDashboard").append(
   "<h2><label for='lengthOfPattern'>Pattern Length: </label></h2><h2 class='lengthOfPattern' id='lengthOfPattern'>0</h2>" +
   "<button class='startGameButton'>Start</button>" +
-  "<h2><label for='strictSwitch'>Strict Mode Enabled: </label></h2><input class='strictSwitch'  id='strictSwitch' type='checkbox' checked>"
+  "<h2><label class='strictLabel' for='strictSwitch'>Strict Mode Enabled: </label></h2><input class='strictSwitch'  id='strictSwitch' type='checkbox'>"
 );
 
 //-----------------------------------------------------------VariableSetup--------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ var simonSaysSequence = [],
     audio3 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
     audio4 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
 
-const HIGHLIGHT_TIME = 800;
+const HIGHLIGHT_TIME = 700;
 //-----------------------------------------------------------Click Functions------------------------------------------------------------------------------
 
 $(".startGameButton").click(function() {
