@@ -8,8 +8,8 @@ $(".gameBoard").append(
 );
 
 $(".gameDashboard").append(
-  "<button class='startGameButton'>Start</button>" +
   "<h2><label for='lengthOfPattern'>Pattern Length: </label></h2><h2 class='lengthOfPattern' id='lengthOfPattern'>0</h2>" +
+  "<button class='startGameButton'>Start</button>" +
   "<h2><label for='strictSwitch'>Strict Mode Enabled: </label></h2><input class='strictSwitch'  id='strictSwitch' type='checkbox' checked>"
 );
 
@@ -22,6 +22,7 @@ var simonSaysSequence = [],
     audio3 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
     audio4 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
 
+const HIGHLIGHT_TIME = 800;
 //-----------------------------------------------------------Click Functions------------------------------------------------------------------------------
 
 $(".startGameButton").click(function() {
@@ -34,7 +35,7 @@ $(".startGameButton").click(function() {
 $(".gameBtn").click(function() {
   if(userTurn) {
     var userSelection = $(this).index();
-    eval("audio" + (userSelection+1) + ".play()");
+    btnHighlightAndSound(userSelection);
     userSequence.push(userSelection);
     if (!userMemoryIsCorrect()) {
       if($(".strictSwitch").prop("checked")) {
@@ -47,7 +48,7 @@ $(".gameBtn").click(function() {
         alert("You Won!");
       } else {
         userTurn = false;
-        simonTurn();
+        setTimeout(function() {simonTurn() }, HIGHLIGHT_TIME + 200);
       }
     }
   }
@@ -77,7 +78,7 @@ function playSimonSequence(startArray) {
       setTimeout( function() {
         playSimonSequence(newArray);
       },300)
-    },1000);
+    },HIGHLIGHT_TIME);
   } else {
       userTurn = true;
   }
@@ -108,6 +109,14 @@ function resetGameStrict() {
   simonSaysSequence = [];
   simonTurn();
   userSequence = [];
+}
+
+function btnHighlightAndSound(btnIndex) {
+  $(".gameBtn").eq(btnIndex).addClass("playUserSound");
+  eval("audio" + (btnIndex+1) + ".play()");
+  setTimeout( function() {
+    $(".gameBtn").eq(btnIndex).removeClass("playUserSound");
+  },HIGHLIGHT_TIME);
 }
 
 });
