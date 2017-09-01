@@ -1,35 +1,59 @@
 body {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: brown;
+  background-color: #D7263D;
 }
-.gameBoard {
-  align-self: flex-start;
+.title {
+  padding-left: 37%;
+}
+.gameDashboard {
+  border: 1px solid;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  background-color: green;
+  margin-top: 5%;
+}
+.gameBoard {
+  padding-left: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #D7263D;
   height: 320px;
   width: 320px;
-  margin-top: 10%;
-  border-radius: 10%;
 }
 .gameBtn {
-  background-color: blue;
+  background-color: #91CB3E;
   height: 150px;
   width: 150px;
-  border-radius: 10%;
-  margin-top: 2%;
+  border-radius: 15%;
+  margin-bottom: 3px;
+  cursor: pointer;
 }
 .playSound{
   border-bottom: 3px solid;
-  border-right: 1px;
+  margin-bottom: 0px;
   transition: .5s;
-  background-color: yellow;
+  background-color: #474747;
+}
+.playUserSound{
+  border-bottom: 3px solid;
+  margin-bottom: 0px;
+  transition: .5s;
+  background-color: #AD343E;
 }
 .startGameButton {
-  align-self: flex-end;
+  padding: 1.5rem 4.5rem;
+  background: #91CB3E;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 300;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background 250ms, box-shadow 250ms;
+}
+.startGameButton:hover {
+ background: #91CB3E;
+ box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
 }
